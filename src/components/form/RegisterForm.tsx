@@ -2,20 +2,18 @@
 
 import React, { useState } from "react";
 import { toast } from "react-toastify";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { request } from "@/server/request";
 import { useRouter } from "next/navigation";
- import "./Login.scss"
+import "./login.scss"
 import Image from "next/image";
 import google from "../../assets/google.png"
 import apple from "../../assets/apple.png"
@@ -49,7 +47,6 @@ export default function RegisterForm() {
   };
 
   return (
-    // <ThemeProvider theme={defaultTheme}>
     <section
       style={{ backgroundColor: "#ffc700", height: "100%" }}
       className="login-section"
@@ -65,10 +62,6 @@ export default function RegisterForm() {
           }}
         >
           <h2 className="login-title">Vodiy Parfum</h2>
-
-          {/* <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-            <LockOutlinedIcon />
-          </Avatar> */}
           <Typography component="h1" variant="h5">
             Ro`yxatdan o`tish
           </Typography>
