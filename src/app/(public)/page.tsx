@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import CategoryRow from "@/components/card/CategoryCard";
 
-import "@/general-styles/public-home.scss";
+import "@/styles/public-home.scss";
 import CarouselProduct from "@/components/latest/Slider";
 
 export default function Home() {

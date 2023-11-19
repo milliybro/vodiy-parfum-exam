@@ -8,12 +8,10 @@ import Cookies from "js-cookie";
 import React, { useState, Fragment } from "react";
 import { toast } from "react-toastify";
 
-import useAuth from "@/store/auth";
-import { USER_DATA, USER_TOKEN } from "@/constants";
-import { useRouter } from 'next/navigation'
-import ROLES from "@/types/roles";
 
-import "@/general-styles/new-register.scss";
+import { useRouter } from 'next/navigation'
+
+import "@/styles/new-register.scss";
 
 
 import loginBackground from "@/assets/login.png";

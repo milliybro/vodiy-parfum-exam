@@ -142,9 +142,6 @@ export default function RegisterForm() {
             </Button>
             <Grid container>
               <Grid item xs>
-                {/* <Link href="/" variant="body2">
-                  Home Page
-                </Link> */}
               </Grid>
             </Grid>
               <Grid
@@ -173,7 +170,6 @@ export default function RegisterForm() {
           </Box>
         </Box>
       </Container>
-    {/* // </ThemeProvider> */}
     </section>
 
   );
