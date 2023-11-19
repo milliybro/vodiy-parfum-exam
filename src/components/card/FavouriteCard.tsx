@@ -37,7 +37,6 @@ const FavouriteCard = () => {
                 <h3>{product?.title || "Mahsulot"}</h3>
                 <div>
                   <h3>{product?.price || "Mavjud emas"}so`m</h3>
-                  <p>{product?.price + 9500}so`m</p>
                 </div>
                 <div className="add__remove__btn">
                   <button
