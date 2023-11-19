@@ -91,6 +91,7 @@ export default function ProductsTable() {
     category: "",
     price: "",
     quantity: "",
+    sold: "",
     image: {},
   });
 
@@ -116,6 +117,7 @@ export default function ProductsTable() {
       category: "",
       price: "",
       quantity: "",
+      sold: "",
       image: {},
     });
   };
@@ -143,6 +145,7 @@ export default function ProductsTable() {
       category: data?.category._id || "",
       price: data?.price || "",
       quantity: data?.quantity || "",
+      sold: data?.sold || "",
       image: data?.image.url || "",
     });
   };
@@ -215,6 +218,7 @@ export default function ProductsTable() {
                   <StyledTableCell align="center">Nomi</StyledTableCell>
                   <StyledTableCell align="center">Narxi</StyledTableCell>
                   <StyledTableCell align="center">Miqdori</StyledTableCell>
+                  <StyledTableCell align="center">Sotildi</StyledTableCell>
                   <StyledTableCell align="center">Kategoriyasi</StyledTableCell>
                   <StyledTableCell align="center"></StyledTableCell>
                 </TableRow>
@@ -238,6 +242,9 @@ export default function ProductsTable() {
                     </StyledTableCell>
                     <StyledTableCell align="center">
                       {product?.quantity || "Aniqlanmagan"} dona
+                    </StyledTableCell>
+                    <StyledTableCell align="center">
+                      {product?.sold || "0"} dona
                     </StyledTableCell>
                     <StyledTableCell align="center">
                       {product?.category.name}
@@ -310,6 +317,19 @@ export default function ProductsTable() {
                   value={formData.quantity}
                   onChange={(e) =>
                     handleInputChange("quantity", e.target.value)
+                  }
+                />
+                <TextField
+                  autoFocus
+                  size="small"
+                  margin="dense"
+                  id="sold"
+                  label="Sotildi"
+                  type="number"
+                  fullWidth
+                  value={formData.sold}
+                  onChange={(e) =>
+                    handleInputChange("sold", e.target.value)
                   }
                 />
               </div>

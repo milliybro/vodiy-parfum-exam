@@ -133,8 +133,7 @@ export default function Dashboard({ children }: ChildrenType) {
     localStorage.removeItem(USER_DATA);
     Cookies.remove(USER_TOKEN);
     setIsAuthenticated(user);
-    setOpenModal(false);
-    router.push("/")
+    router.push("/users")
   }
 
   const handleClickOpen = () => {
@@ -233,12 +232,12 @@ export default function Dashboard({ children }: ChildrenType) {
               </ListItemIcon>
               <ListItemText primary="Shaxsiy" />
             </Link>
-            <ListItemButton className="dashboard-link" onClick={handleClickOpen}>
+            <Link className={`dashboard-link ${pathname === "/login" ? "active" : ""}`} href="/login">
               <ListItemIcon>
                 <LogoutIcon />
               </ListItemIcon>
-              <ListItemText primary="Chiqish" />
-            </ListItemButton>
+              <ListItemText primary="Chiqish" onClick={logout} />
+              </Link>
           </List>
         </Drawer>
         <Box
