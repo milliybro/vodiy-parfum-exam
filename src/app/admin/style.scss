@@ -3,7 +3,97 @@
    background-color: #ffc700;
    border-radius: 10px;
    padding: 20px 10px;
-   h1{
-
-   }
 }
+
+.progress {
+   display: block;
+   margin: 0 auto;
+   overflow: hidden;
+ }
+ 
+ .progress .bar1 {
+   stroke: #5680f9;
+ }
+ .progress .offline {
+   stroke: #c2c2c2;
+ }
+ .progress .online {
+   stroke: #007bff;
+ }
+ 
+ .progress .offline,
+ .progress .online {
+   stroke-width: 10px;
+ }
+ .progressdiv {
+   position: relative;
+ }
+ 
+ .progressdiv:after {
+   position: absolute;
+   top: 40%;
+   left: 46%;
+   font-size: 40px;
+   transform: translate(-50%, -50%);
+   content: attr(data-percent);
+ }
+ 
+ .progressdiv:before {
+   position: absolute;
+   top: 53%;
+   left: 46%;
+   font-size: 15px;
+   transform: translate(-50%, -50%);
+   content: "online";
+ }
+ .progress-main-all {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: flex-start;
+ }
+ 
+ .progress-main-text .user-data {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+ }
+ 
+ .progress-main-text {
+   margin-left: 50px;
+ }
+ 
+ .progress-main-text .user-div {
+   width: 15px;
+   height: 15px;
+   margin-right: 10px;
+ }
+ .d-div1 {
+   background: #e3d9d9;
+ }
+ .d-div2 {
+   background: #5680f9;
+ }
+ .d-div3 {
+   background: #c2c2c2;
+ }
+ 
+ path {
+   stroke-linecap: round;
+   transition: stroke-dashoffset 1s ease;
+ }
+ 
+ path.grey {
+   stroke: #ececed9e;
+   stroke-width: 20;
+ }
+ .grey-path-2 {
+   stroke: #fff;
+   stroke-width: 16px;
+ }
+ 
+ path.white1 {
+   stroke: #fff;
+   stroke-width: 5.5px;
+ }
+ 
