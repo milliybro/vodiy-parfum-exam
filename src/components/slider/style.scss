@@ -1,0 +1,71 @@
+@use "../../general-styles/variables.scss" as vrb;
+
+.product__img {
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+  }
+}
+
+.product__border {
+  padding-bottom: 20px;
+}
+
+.products__card {
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.products__card {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.product__content {
+  margin-left: 50px;
+  // background-color: rgba(0, 0, 0, 0.5);
+  h3{
+    padding-top: 150px;
+
+    font-size: 32px;
+  }
+  p{
+background-color: #ffc700;
+padding: 10px;
+border-radius: 10px;
+  }
+  p::first-letter {
+    text-transform:capitalize;
+}
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+  color: #000;
+}
+
+.product__btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: vrb.$secondary;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid vrb.$secondary;
+}
+
+.button__wrapper {
+  padding: 10px;
+}
+
+.nav__login {
+  display: flex;
+  justify-content: center;
+}
