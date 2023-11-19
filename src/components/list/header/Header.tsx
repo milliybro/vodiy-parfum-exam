@@ -64,7 +64,6 @@ const Header = () => {
     Cookies.remove(USER_TOKEN);
     setIsAuthenticated(user);
     handleClose();
-    toast.info("You are logged out")
     router.push("/")
   }
 

@@ -6,14 +6,16 @@ import "./style.scss";
 
 export const metadata: Metadata = {
   title: "Accountga kirish",
-  description:
-    "Vodiy Parfum | Kirish",
+  description: "Vodiy Parfum | Kirish",
 };
 
 const LoginPage = () => {
-  return <div>
-    <LoginForm/>
-  </div>;
+  
+  return (
+    <div>
+      <LoginForm />
+    </div>
+  );
 };
 
 export default LoginPage;

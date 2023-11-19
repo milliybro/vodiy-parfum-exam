@@ -2,9 +2,6 @@
 
 import { useEffect, useState, Fragment } from "react";
 import Image from "next/image";
-import EditIcon from "@mui/icons-material/Edit";
-import DeleteIcon from "@mui/icons-material/Delete";
-import MoreIcon from "@mui/icons-material/More";
 import { request } from "@/server/request";
 import useCategories from "@/store/categories";
 import Button from "@mui/material/Button";

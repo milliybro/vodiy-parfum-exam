@@ -26,6 +26,8 @@ import google from "../../assets/google.png"
 import apple from "../../assets/apple.png"
 import facebook from "../../assets/facebook.png"
 import Image from "next/image";
+import Loading from "@/components/AuthLoading/Login";
+
 
 const defaultTheme = createTheme();
 
@@ -34,10 +36,18 @@ export default function LoginForm() {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
-
+  const [authLoading, setAuthLoading] = useState(false);
+  if (authLoading) {
+    return (
+      <div className="loader">
+        <Loading />
+      </div>
+    );
+  }
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
+      setAuthLoading(true);
       setLoading(true);
       const data = new FormData(event.currentTarget);
       const userData = {
@@ -59,12 +69,12 @@ export default function LoginForm() {
         router.push("/");
       }
     } finally {
+      setAuthLoading(false);
       setLoading(false);
     }
   };
 
   return (
-    // <ThemeProvider theme={defaultTheme}>
     <section
       style={{ backgroundColor: "#ffc700", height: "100%" }}
       className="login-section"

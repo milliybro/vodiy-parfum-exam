@@ -20,15 +20,21 @@
   gap: 20px;
 }
 
+.edit-btn{
+  color: #ffc700;
+  border: 1px solid #ffc700;
+}
+.delete-btn{
+  color: red !important;
+  border: 1px solid red !important;
+}
 .edit-btn, .delete-btn {
-  padding: 4px 10px;
+  padding: 10px;
   border-radius: 4px;
   border: none;
   background-color: #fff;
   border: 1px solid #ffc700;
-  svg {
-    fill: #000;
-  }
+
   &:hover{
     .edit-btn{
       background-color: rgb(0, 0, 255);

@@ -11,8 +11,6 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { useEffect, Fragment, useState } from "react";
 import useUsers from "@/store/users";
-import EditIcon from "@mui/icons-material/Edit";
-import DeleteIcon from "@mui/icons-material/Delete";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import Loading from "@/components/loading/Loading";
@@ -197,16 +195,16 @@ export default function GeneralTable() {
                     </StyledTableCell>
                     <StyledTableCell className="action-btn" align="center">
                       <button
-                        onClick={() => deleteUser(user?._id)}
-                        className="delete-btn"
-                      >
-                        <DeleteIcon />
-                      </button>
-                      <button
                         onClick={() => handleEdit(user?._id)}
                         className="edit-btn"
                       >
-                        <EditIcon />
+                        Tahrirlash
+                      </button>
+                      <button
+                        onClick={() => deleteUser(user?._id)}
+                        className="delete-btn"
+                      >
+                        O`chirish
                       </button>
                     </StyledTableCell>
                   </StyledTableRow>
@@ -274,6 +272,19 @@ export default function GeneralTable() {
                   value={formData.phoneNumber}
                   onChange={(e) =>
                     handleInputChange("phoneNumber", e.target.value)
+                  }
+                />
+                <TextField
+                  size="small"
+                  autoFocus
+                  margin="dense"
+                  id="password"
+                  label="Parol"
+                  type="text"
+                  fullWidth
+                  value={formData.password}
+                  onChange={(e) =>
+                    handleInputChange("password", e.target.value)
                   }
                 />
               </div>
