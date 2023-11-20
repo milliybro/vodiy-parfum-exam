@@ -13,9 +13,6 @@ import "./style.scss";
 const AdminAccountPage = () => {
   const router = useRouter();
 
-  const [country, setCountry] = useState("Uzbekistan" || Cookies.get("country"))
-  const [region, setRegion] = useState("Tashkent" || Cookies.get("region"))
-
   const [loading, setLoading] = useState(false);
   const [userInfo, setUserInfo] = useState<UserType | null>(null);
   const [formValues, setFormValues] = useState({

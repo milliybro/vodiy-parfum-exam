@@ -18,7 +18,7 @@ const AccountPage = () => {
     }
   }, [isAuthenticated, router])
   
-  return <section className="accountpage">
+  return <section className="accountpage container">
     <PublicAccountForm />
   </section>;
 };
